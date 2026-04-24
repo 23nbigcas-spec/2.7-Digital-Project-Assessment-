@@ -1,12 +1,11 @@
-orders = [{},{}]
+orders = [{},{}] 
+breads = ["Flatbread", "Pita", "Naan", "Bowl"]
 
-breads = []
+proteins = ["Chicken", "Beef", "Lamb", "Doner", "Falafel", "None"]
 
-proteins = []
+vegetables = ["Lettuce", "Tomato", "White Onion", "Red Onion", "Cucumber", "Pickles"]#Make sure on order it asks how many veges they want
 
-vegetables = []
-
-sauces = []
+sauces = ["garlic", "medium chilli", "hot chilli", "tzatziki", "Tahini", "Hot garlic"]
 
 
 def business_menu():
