@@ -1,4 +1,4 @@
-orders = [{},{}] 
+orders = [] 
 breads = ["Flatbread", "Pita", "Naan", "Bowl"]
 
 proteins = ["Chicken", "Beef", "Lamb", "Doner", "Falafel", "None"]
@@ -74,10 +74,32 @@ def view_category(category):
     elif option == 2:
         remove_ingredient(category)
 
+def ingredient_order(category): #for ingredients that need more than 1 
+    print(category)
+    category_order = []
+    amount = int(input(f"How many do you want to add to your order?: "))
+
+    for i in range(amount):
+        category_order.append((input(f"Enter ingredient {i+1}: ")))
+        print(category_order)
+
+    return category_order
+
+def add_order(orders):
+    orders.append({
+        "Bread" : ingredient_order(breads), 
+        "Proteins" : ingredient_order(proteins),
+        "Vegetables" : ingredient_order(vegetables),
+        "Sauces" : ingredient_order(sauces)
+    })
 
 
 
-while True: #main line of code
+
+
+
+
+while True: #maybe make this into a function
     business_menu()
 
     business_choice = get_int()
